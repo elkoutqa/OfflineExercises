@@ -198,7 +198,7 @@ public class OfflineExercises {
 		return num;
 	}
 	
-	public void diamond(int size) {
+	public String diamond(int size) {
 		
 		//size should be an odd number > 2
 		
@@ -245,12 +245,15 @@ public class OfflineExercises {
 
 		line = line + "*";
 		array[size - 1]=line;
+		line = "";
 		
 		for (String i: array) {
-			System.out.println(i);
-			
+			line = line + "\n" + i;
 		}
-	
+		
+		System.out.println(line);
+		
+		return line;
 	}
 	
 
