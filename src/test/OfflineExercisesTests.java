@@ -73,6 +73,6 @@ public class OfflineExercisesTests {
 		assertEquals(4, oe.bunnyEars(2));
 		assertEquals(8, oe.bunnyEars(4));
 		assertEquals(32, oe.bunnyEars(16));
-		oe.diamond();
+		oe.diamond(7);
 	}
 }

@@ -1,5 +1,7 @@
 package code;
 
+import java.util.ArrayList;
+
 public class OfflineExercises {
 
 	// Given a string, return a string where
@@ -203,52 +205,69 @@ public class OfflineExercises {
 		return num;
 	}
 	
-	public void diamond() {
-		/*
-		int size = 5;
-		int mid = size - 3;
-		String line = "";
+	public void diamond(int size) {
 		
-		System.out.println("   *");
+		String line = "";
+		int counter = 0;
+		ArrayList<String> array = new ArrayList<>();
+		
+		int mid1 = (size - 1)/2;
+		
+		
+		/*System.out.println("   *");
 		System.out.println("  * *");
 		System.out.println(" *   *");
 		System.out.println("*     *");
 		System.out.println(" *   *");
 		System.out.println("  * *");
-		System.out.println("   *\n");
+		System.out.println("   *\n");*/
 		
-		for (int j = 0; j < mid; j++) {
-			line = line + " ";
+		for (int i =0; i < mid1; i++) {
+			line = " "+line;
 		}
 		
 		line = line + "*";
-		System.out.println(line);
+		array.add(line);
+		
 		line = "";
 		
-		for (int i = 1; i < size; i=i+2) {
+		for (int i = 1; i < size-1; i=i+2) {
+			counter++;
 			
-			
-			
-			line = "*";
-				
-			for (int j = 0; j <i ; j++) {
-				line = line + " ";
-			}
-			line = line + "*";
-			
-			for (int j = size; j >i+mid+1 ; j--) {
+			for (int j = 0; j < mid1 - counter ; j++) {
 				line = " "+line;
 			}
 			
+			line = line + "*";
 			
-			
-			
-			System.out.println(line);
+			for (int j = 0 ; j < i; j++) {
+				line = line+" ";
+			}
+
+			line = line+"*";
+			array.add(line);
 			line = "";
 			
 		}
 		
-		*/
+		int f = array.size();
+		for (int i = 1; i < mid1; i++) {
+			
+			array.add(array.get(f-1-i));
+		}
+		
+		
+		for (int i =0; i < mid1; i++) {
+			line = " "+line;
+		}
+
+		line = line + "*";
+		array.add(line);
+		
+		for (String i: array) {
+			System.out.println(i);
+		}
+	
 	}
 	
 
