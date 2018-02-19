@@ -44,8 +44,8 @@ public class OfflineExercises {
 				if (instance == 0) {
 					start = i+5;
 					end = i+5;
-					
 					instance = 1;
+					
 				} else if (instance == 1) {
 					end = i;
 				}
@@ -100,9 +100,7 @@ public class OfflineExercises {
 		String test = "";
 		int length = input.length();
 		
-		test = input.substring(0, a) + input.substring(length - a,length);
-		
-		return test;
+		return input.substring(0, a) + input.substring(length - a,length);
 	}
 
 	// Given a string, return true if it ends in "ly".
@@ -195,32 +193,21 @@ public class OfflineExercises {
 			return 0;
 		}	
 		
-
 		num = bunnyEars(input-1) + 2;
-		
-		if (num/2 == input) {
-			return num;
-		}
 		
 		return num;
 	}
 	
 	public void diamond(int size) {
 		
+		//size should be an odd number > 2
+		
 		String line = "";
 		int counter = 0;
+		
 		ArrayList<String> array = new ArrayList<>();
 		
 		int mid1 = (size - 1)/2;
-		
-		
-		/*System.out.println("   *");
-		System.out.println("  * *");
-		System.out.println(" *   *");
-		System.out.println("*     *");
-		System.out.println(" *   *");
-		System.out.println("  * *");
-		System.out.println("   *\n");*/
 		
 		for (int i =0; i < mid1; i++) {
 			line = " "+line;
