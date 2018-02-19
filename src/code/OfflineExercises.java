@@ -205,7 +205,7 @@ public class OfflineExercises {
 		String line = "";
 		int counter = 0;
 		
-		ArrayList<String> array = new ArrayList<>();
+		String[] array = new String[size];
 		
 		int mid1 = (size - 1)/2;
 		
@@ -214,7 +214,8 @@ public class OfflineExercises {
 		}
 		
 		line = line + "*";
-		array.add(line);
+
+		array[0] = line;
 		
 		line = "";
 		
@@ -222,37 +223,32 @@ public class OfflineExercises {
 			counter++;
 			
 			for (int j = 0; j < mid1 - counter ; j++) {
-				line = " "+line;
+				line = " " + line;
 			}
 			
 			line = line + "*";
 			
 			for (int j = 0 ; j < i; j++) {
-				line = line+" ";
+				line = line + " ";
 			}
 
-			line = line+"*";
-			array.add(line);
+			line = line + "*";
+
+			array[counter]=line;
+			array[size - 1 - counter]=line;
 			line = "";
-			
 		}
 		
-		int f = array.size();
-		for (int i = 1; i < mid1; i++) {
-			
-			array.add(array.get(f-1-i));
-		}
-		
-		
-		for (int i =0; i < mid1; i++) {
+		for (int i = 0; i < mid1; i++) {
 			line = " "+line;
 		}
 
 		line = line + "*";
-		array.add(line);
+		array[size - 1]=line;
 		
 		for (String i: array) {
 			System.out.println(i);
+			
 		}
 	
 	}
